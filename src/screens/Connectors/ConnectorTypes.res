@@ -131,6 +131,7 @@ type processorTypes =
   | FINIX
   | PAYJUSTNOW
   | ZIFT
+  | AXIA
 
 type payoutProcessorTypes =
   | ADYEN

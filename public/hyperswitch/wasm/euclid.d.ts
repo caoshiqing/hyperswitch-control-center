@@ -1,50 +1,38 @@
 /* tslint:disable */
 /* eslint-disable */
-export function getAuthenticationConnectorConfig(key: string): any;
-export function getKeyType(key: string): string;
-export function getTaxProcessorConfig(key: string): any;
-export function getValidWebhookStatus(key: string): any;
-export function getVariantValues(key: string): any;
-export function getConnectorConfig(key: string): any;
-/**
- * This function can be used by the frontend to educate wasm about the forex rates data.
- * The input argument is a struct fields base_currency and conversion where later is all the conversions associated with the base_currency
- * to all different currencies present.
- */
-export function setForexData(forex: any): any;
-export function getBillingConnectorConfig(key: string): any;
-export function getDescriptionCategory(): any;
-export function getAllConnectors(): any;
+export function parseToString(val: string): string;
+export function getAllKeys(): any;
+export function getAllPayoutKeys(): any;
 export function analyzeProgram(js_program: any): any;
-export function getPMAuthenticationProcessorConfig(key: string): any;
-export function getSurchargeKeys(): any;
-export function getPayoutConnectorConfig(key: string): any;
-export function getRequestPayload(input: any, response: any): any;
+export function getDescriptionCategory(): any;
 export function getThreeDsDecisionRuleKeys(): any;
-export function getPayoutVariantValues(key: string): any;
-export function runProgram(program: any, input: any): any;
+export function getVariantValues(key: string): any;
+export function getKeyType(key: string): string;
 /**
  * This function allows the frontend to get all the merchant's configured
  * connectors that are valid for a rule based on the conditions specified in
  * the rule
  */
 export function getValidConnectorsForRule(rule: any): any;
+export function getPMAuthenticationProcessorConfig(key: string): any;
+export function getSurchargeKeys(): any;
+export function runProgram(program: any, input: any): any;
+export function getRequestPayload(input: any, response: any): any;
+export function getTaxProcessorConfig(key: string): any;
+export function getConnectorConfig(key: string): any;
+export function getAllConnectors(): any;
+/**
+ * This function can be used by the frontend to educate wasm about the forex rates data.
+ * The input argument is a struct fields base_currency and conversion where later is all the conversions associated with the base_currency
+ * to all different currencies present.
+ */
+export function setForexData(forex: any): any;
+export function getPayoutConnectorConfig(key: string): any;
+export function getPayoutVariantValues(key: string): any;
 export function getResponsePayload(input: any): any;
-/**
- * This function can be used by the frontend to get all the two letter country codes
- * along with their country names.
- */
-export function getTwoLetterCountryCode(): any;
-export function getThreeDsKeys(): any;
-/**
- * This function can be used by the frontend to provide the WASM with information about
- * all the merchant's connector accounts. The input argument is a vector of all the merchant's
- * connector accounts from the API.
- */
-export function seedKnowledgeGraph(mcas: any): any;
+export function getBillingConnectorConfig(key: string): any;
+export function getValidWebhookStatus(key: string): any;
 export function addTwo(n1: bigint, n2: bigint): bigint;
-export function getAllKeys(): any;
-export function getAllPayoutKeys(): any;
 /**
  * This function can be used to perform currency_conversion on the input amount, from_currency,
  * to_currency which are all expected to be one of currencies we already have in our Currency
@@ -52,7 +40,19 @@ export function getAllPayoutKeys(): any;
  */
 export function convertCurrency(amount: bigint, from_currency: any, to_currency: any): any;
 export function getPayoutDescriptionCategory(): any;
-export function parseToString(val: string): string;
+export function getThreeDsKeys(): any;
+/**
+ * This function can be used by the frontend to get all the two letter country codes
+ * along with their country names.
+ */
+export function getTwoLetterCountryCode(): any;
+export function getAuthenticationConnectorConfig(key: string): any;
+/**
+ * This function can be used by the frontend to provide the WASM with information about
+ * all the merchant's connector accounts. The input argument is a vector of all the merchant's
+ * connector accounts from the API.
+ */
+export function seedKnowledgeGraph(mcas: any): any;
 /**
  * This function can be used by the frontend to get all the merchant category codes
  * along with their names.

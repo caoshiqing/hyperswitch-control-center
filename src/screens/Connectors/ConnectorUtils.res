@@ -169,6 +169,7 @@ let connectorList: array<connectorTypes> = [
   Processors(TESOURO),
   Processors(FINIX),
   Processors(ZIFT),
+  Processors(AXIA)
 ]
 
 let connectorListForLive: array<connectorTypes> = [
@@ -788,6 +789,10 @@ let vgsInfo = {
   description: "Very Good Security (VGS) is a data security platform that helps businesses protect sensitive information such as payment card data, personally identifiable information (PII), and other confidential data. VGS provides solutions for data tokenization, encryption, and secure data storage, allowing businesses to reduce their compliance scope and mitigate the risks associated with handling sensitive data.",
 }
 
+let axiaInfo = {
+  description: "Axia Payments is a payment processor that provides businesses with secure and efficient payment solutions, including credit card processing, mobile payments, and online transactions.",
+}
+
 let getConnectorNameString = (connector: processorTypes) =>
   switch connector {
   | ADYEN => "adyen"
@@ -893,6 +898,7 @@ let getConnectorNameString = (connector: processorTypes) =>
   | FINIX => "finix"
   | PAYJUSTNOW => "payjustnow"
   | ZIFT => "zift"
+  | AXIA => "axia"
   }
 
 let getPayoutProcessorNameString = (payoutProcessor: payoutProcessorTypes) =>
@@ -1080,6 +1086,7 @@ let getConnectorNameTypeFromString = (connector, ~connectorType=ConnectorTypes.P
     | "tesouro" => Processors(TESOURO)
     | "finix" => Processors(FINIX)
     | "zift" => Processors(ZIFT)
+    | "axia" => Processors(AXIA)
     | _ => UnknownConnector("Not known")
     }
   | PayoutProcessor =>
@@ -1245,6 +1252,7 @@ let getProcessorInfo = (connector: ConnectorTypes.processorTypes) => {
   | FINIX => finixInfo
   | PAYJUSTNOW => payjustnowInfo
   | ZIFT => ziftInfo
+  | AXIA => axiaInfo
   }
 }
 
@@ -2186,6 +2194,7 @@ let getDisplayNameForProcessor = (connector: ConnectorTypes.processorTypes) =>
   | FINIX => "Finix"
   | PAYJUSTNOW => "PayJustNow"
   | ZIFT => "Zift"
+  | AXIA => "Axia"
   }
 
 let getDisplayNameForPayoutProcessor = (payoutProcessor: ConnectorTypes.payoutProcessorTypes) =>

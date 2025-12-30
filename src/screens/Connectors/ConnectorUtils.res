@@ -169,7 +169,7 @@ let connectorList: array<connectorTypes> = [
   Processors(TESOURO),
   Processors(FINIX),
   Processors(ZIFT),
-  Processors(AXIA)
+  Processors(AXIA),
 ]
 
 let connectorListForLive: array<connectorTypes> = [
